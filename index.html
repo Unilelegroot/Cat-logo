@@ -1,61 +1,279 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Catálogo</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <style>
+        /* .img-card-container{
+            height: 300px;
+            width: 300px;
+            align-self: center;
+        }
+        .card-img-top{
+            width:  0 auto;
+            height: 0 auto;
+            align-self: center;
+        }
+        .card{
+            height: 450px;
+        } */
+        .container {
+            margin: 0 auto;
+        }
+
+        .card-img-top {
+            width: 100%;
+            height: auto;
+        }
+
+        .container-img {
+            width: 100%;
+            height: auto 500px;
+        }
+
+        #row {
+
+            justify-content: center;
+        }
+    </style>
 </head>
+
 <body class="bg-light">
     <!-- Menu de Navegação -->
-     <nav class="navbar bg-warning navbar-light p-3">
+    <nav class="navbar bg-warning navbar-light p-3">
         <div class="container">
             <span class="fw-bold navbar-brand">Catálogo de Gatos</span>
         </div>
-     </nav>
+    </nav>
 
-     <!-- Container Principal/MAIN -->
+    <!-- Container Principal/MAIN -->
     <main class="container">
-        <div class="row">
-        <div class="col-12">
+        <div id="row" class="row">
 
             <!-- Card 1 -->
-            <div class="card">
-            <img class="card-img-top" src="https://www.correiobraziliense.com.br/aqui/wp-content/uploads/2025/06/gato_persa.jpg" alt="gato-persa">
-            <div class="card-body">
-                <h5 style="color: burlywood;">GATO PERSA</h5>
-                <p class="card-text fw-bold">Carateristicas:
-                    <span style="font-weight: 100;"> é um felino tranquilo, com pelo longo, focinho achatado, olhos grandes e redondos, e um temperamento doce e afetuoso.</span>
-                </p>
+            <div class="card col-12 col-md-4 col-lg-4 col-xl-3 m-4 p-0">
+                <div class="container-img"><img class="card-img-top"
+                        src="https://www.correiobraziliense.com.br/aqui/wp-content/uploads/2025/06/gato_persa.jpg"
+                        alt="gato-persa"></div>
+                <div class="card-body">
+                    <h5 style="color: burlywood;">GATO PERSA</h5>
+                    <p class="card-text fw-bold">Carateristicas:
+                        <span style="font-weight: 100;"> é um felino tranquilo, com pelo longo, focinho achatado, olhos
+                            grandes e redondos, e um temperamento doce e afetuoso.</span>
+                    </p>
+                    <button class="btn btn-warning mb-4" data-bs-toggle="modal" data-bs-target="#m-persa">Saiba Mais
+                        +</button>
+                </div>
             </div>
+            <!-- Modal Persa -->
+            <div class="modal" tabindex="-1" id="m-persa">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title">Raça Persa</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <p>😺 As origens desta datam desde o início do século XVII, onde o explorador italiano
+                                Pietro Della Valle, durante uma de suas viagens pela Ásia, passou pela Pérsia, atual Irã
+                                e, trouxe consigo alguns dos exemplares de gatos que habitavam as ruas locais. Quando
+                                voltou à Itália, imediatamente, os gatos ganharam popularidade entre as pessoas, devido
+                                a sua pelagem macia e brilhante. 🐾.
+                            </p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal">Fechar</button>
+                        </div>
+                    </div>
+                </div>
             </div>
 
             <!-- Card 2 -->
-            <div class="card">
-            <img class="card-img-top" src="https://www.correiobraziliense.com.br/aqui/wp-content/uploads/2025/06/gato_persa.jpg" alt="gato-persa">
-            <div class="card-body">
-                <h5 style="color: burlywood;">GATO SIAMÊS</h5>
-                <p class="card-text fw-bold">Carateristicas:
-                    <span style="font-weight: 100;"> é um felino tranquilo, com pelo longo, focinho achatado, olhos grandes e redondos, e um temperamento doce e afetuoso.</span>
-                </p>
+            <div class="card col-12 col-md-4 col-lg-4 col-xl-3 m-4 p-0">
+                <div class="container-img"><img class="card-img-top"
+                        src="https://meusanimais.com.br/wp-content/uploads/2015/04/gato-siames.jpg" alt="gato-siames">
+                </div>
+                <div class="card-body">
+                    <h5 style="color: burlywood;">GATO SIAMÊS</h5>
+                    <p class="card-text fw-bold">Carateristicas:
+                        <span style="font-weight: 100;"> é um felino elegante e atlético, conhecido pela sua pelagem
+                            curta e brilhante, com corpo claro e extremidades mais escuras, e olhos azuis intensos e
+                            característicos. São gatos muito sociáveis e inteligentes, gostando de interagir.</span>
+                    </p>
+                    <button class="btn btn-warning mb-4" data-bs-toggle="modal" data-bs-target="#m-siames">Saiba Mais +</button>
+
+                </div>
             </div>
+            <!-- Modal Siames -->
+            <div class="modal" tabindex="-1" id="m-siames">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title">Raça Siamês</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <p>😺 Acredita-se que a origem exata da raça seja o Sudoeste Asiático, mais especificamente o Sião (atual Tailândia), onde eram tidos como o gato da realeza e mantidos em templos sagrados. São conhecidos naquele país, onde são uma de várias raças nativas, como Wichien-Maat ou Maas (วิเชียรมาศ, "Diamante-Lua"). De lá foram levados para a Inglaterra, em 1884, de onde se espalharam para outras partes do mundo. 🐾.
+                            </p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal">Fechar</button>
+                        </div>
+                    </div>
+                </div>
             </div>
 
             <!-- Card 3 -->
-            <div class="card">
-            <img class="card-img-top" src="https://www.correiobraziliense.com.br/aqui/wp-content/uploads/2025/06/gato_persa.jpg" alt="gato-persa">
-            <div class="card-body">
-                <h5 style="color: burlywood;">GATO PERSA</h5>
-                <p class="card-text fw-bold">Carateristicas:
-                    <span style="font-weight: 100;"> é um felino tranquilo, com pelo longo, focinho achatado, olhos grandes e redondos, e um temperamento doce e afetuoso.</span>
-                </p>
+            <div class="card col-12 col-md-4 col-lg-4 col-xl-3 m-4 p-0">
+                <div class="container-img"><img class="card-img-top"
+                        src="https://midias.correiobraziliense.com.br/_midias/jpg/2025/06/02/675x450/1_caracteristicas_gato_siberiano-53204746.jpg?20250602070359?20250602070359"
+                        alt="gato-siberiano"></div>
+                <div class="card-body">
+                    <h5 style="color: burlywood;">GATO SIBERIANO</h5>
+                    <p class="card-text fw-bold">Carateristicas:
+                        <span style="font-weight: 100;"> é um felino tranquilo, com pelo longo, focinho achatado, olhos
+                            grandes e redondos, e um temperamento doce e afetuoso.</span>
+                    </p>
+                    <button class="btn btn-warning mb-4" data-bs-toggle="modal" data-bs-target="#m-siberiano">Saiba Mais +</button>
+
+                </div>
             </div>
+
+            <!-- Modal Siberiano -->
+            <div class="modal" tabindex="-1" id="m-siberiano">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title">Raça Siberiana</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <p>😺 O Siberiano é uma raça centenária (variedade natural) de gato doméstico na Rússia e recentemente desenvolvido como uma raça formal com padrões promulgados em todo o mundo desde o final dos anos 80. O gato tem semelhanças com o gato Norueguês da Floresta, com o qual provavelmente está intimamente relacionado. É uma raça natural da Sibéria e do gato nacional da Rússia.Embora tenha começado como uma raça, é hoje seletivamente criada e pedigree hoje em pelo menos sete grandes organizações de criadores e criadores de gatos.🐾.
+                            </p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal">Fechar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="card col-12 col-md-4 col-lg-4 col-xl-3 m-4 p-0">
+                <div class="container-img"><img class="card-img-top"
+                        src="https://spotpet.com/_next/image?url=https%3A%2F%2Fimages.ctfassets.net%2Fm5ehn3s5t7ec%2Fwp-image-197603%2Ffded59e325bf4d5d887ffbb1d43a58b6%2FHow-Much-Does-aA-Maine-Coon_Cat-Cost.webp&w=1920&q=75"
+                        alt="gato-mainecoon"></div>
+                <div class="card-body">
+                    <h5 style="color: burlywood;">GATO MAINE COON</h5>
+                    <p class="card-text fw-bold">Carateristicas:
+                        <span style="font-weight: 100;"> é um felino conhecido pelo seu tamanho grande e físico robusto,
+                            pelagem longa e macia, e um caráter doce, sociável e inteligente. Fisicamente, destacam-se
+                            pela cabeça quadrada, orelhas com tufos de pelo, e uma cauda longa e felpuda.</span>
+                    </p>
+                    <button class="btn btn-warning mb-4" data-bs-toggle="modal" data-bs-target="#m-mainecoon">Saiba Mais +</button>
+
+                </div>
+            </div>
+
+            <!-- Modal Maine Coon -->
+            <div class="modal" tabindex="-1" id="m-mainecoon">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title">Raça Maine Coon</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <p>😺 Maine Coon é uma raça de gato originária do nordeste dos Estados Unidos. É considerada a raça de pelo mais antiga, além de ser a maior de todas as raças de gato do mundo. Foi reconhecida como raça oficial no estado norte-americano do Maine, onde era famoso pela sua capacidade de caçar ratos e tolerar climas rigorosos. Também é conhecido como "o gigante gentil". Embora as origens exatas do Maine Coon e data de apresentação para os Estados Unidos sejam desconhecidas, muitas teorias foram propostas. No final do século XIX, sua existência ficou ameaçada quando raças de pelos do exterior foram introduzidas no início do século XX. O Maine Coon, desde então, retornou e é agora uma das raças de gatos mais populares do mundo. 🐾.
+                            </p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal">Fechar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 5 -->
+            <div class="card col-12 col-md-4 col-lg-4 col-xl-3 m-4 p-0">
+                <div class="container-img"><img class="card-img-top"
+                        src="https://img.nsctotal.com.br/wp-content/uploads/2024/02/gato-ragdoll-944x531.jpg"
+                        alt="gato-ragdoll"></div>
+                <div class="card-body">
+                    <h5 style="color: burlywood;">GATO RAGDOLL</h5>
+                    <p class="card-text fw-bold">Carateristicas:
+                        <span style="font-weight: 100;">é grande, dóce e tem uma pelagem sedosa e longa de cor clara nas
+                            extremidades. É uma raça conhecida pela personalidade afetuosa e sociável, muitas vezes
+                            comparada a um cachorro por se apegar à família e responder a treinos.</span>
+                    </p>
+                    <button class="btn btn-warning mb-4" data-bs-toggle="modal" data-bs-target="#m-ragdoll">Saiba Mais +</button>
+
+                </div>
+            </div>
+
+            <!-- Modal Ragdoll -->
+            <div class="modal" tabindex="-1" id="m-ragdoll">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title">Raça Ragdoll</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <p>😺 Ragdoll, comumente chamados Filhos de Josephine ou Filhos da Ann, é uma raça de gato desenvolvida nos Estados Unidos, mas especificamente no estado da Califórnia, durante a década de 1960. Com seu porte gigante, temperamento dependente, dócil e uma pelagem cheia, é um animal de características marcantes. Sua criação se deu a partir com uma gata branca, com características de Angorá e gatos Sagrado da Birmânia. Hoje em dia é uma das raças mais apreciadas nos Estados Unidos. 🐾.
+                            </p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal">Fechar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 6 -->
+            <div class="card col-12 col-md-4 col-lg-4 col-xl-3 m-4 p-0">
+                <div class="container-img"><img class="card-img-top"
+                        src="https://media.hswstatic.com/eyJidWNrZXQiOiJjb250ZW50Lmhzd3N0YXRpYy5jb20iLCJrZXkiOiJnaWZcL3NodXR0ZXJzdG9jay0xODk4NjI5NjY5LWhlcm8uanBnIiwiZWRpdHMiOnsicmVzaXplIjp7IndpZHRoIjo4Mjh9LCJ0b0Zvcm1hdCI6ImF2aWYifX0="
+                        alt="gato-bombaim"></div>
+                <div class="card-body">
+                    <h5 style="color: burlywood;">GATO BOMBAIM</h5>
+                    <p class="card-text fw-bold">Carateristicas:
+                        <span style="font-weight: 100;"> é um felino de médio porte, conhecido por sua pelagem negra
+                            brilhante, semelhante a couro envernizado, e olhos grandes e expressivos de cor cobre ou
+                            dourada.</span>
+                    </p>
+                    <button class="btn btn-warning mb-4" data-bs-toggle="modal" data-bs-target="#m-bombaim">Saiba Mais +</button>
+
+                </div>
+            </div>
+            <!-- Modal Bombaim -->
+            <div class="modal" tabindex="-1" id="m-bombaim">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title">Raça Bombaim</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <p>😺 Bombaim é uma raça de gatos de pelagem curta e preta, originária dos Estados Unidos da América. A história dessa raça começa quando a norte-americana Nikki Horner decidiu criar um gato que fosse a miniatura de uma pantera-negra. A história dessa raça começa quando a norte-americana Nikki Horner decidiu criar um gato que fosse a miniatura de uma pantera-negra. Ela levou mais de 30 anos para criar esta nova raça. Seu ideal era um gato parecido com o birmanês, mas negro e com olhos cor de topázio. No dia 14 de junho de 1970 o Bombaim foi registrado no Cat Fanciers' Association (CFA). Em 1974 ele já tinha seu clube e em maio em 1976 ele já podia concorrer em classe campeão. Foi uma das primeiras raças reconhecidas pela The International Cat Association (TICA). 🐾.
+                            </p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal">Fechar</button>
+                        </div>
+                    </div>
+                </div>
             </div>
 
             <!-- ----------------------------------------------------------------- -->
+        </div>
 
-        </div>
-        </div>
     </main>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>
